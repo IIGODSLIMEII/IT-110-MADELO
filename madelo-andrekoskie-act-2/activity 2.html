@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Practical Application Activity</title>
+</head>
+<body>
+
+  <header>
+    <h1 id="main-heading">HTML Practical Application Activity</h1>
+    <p>Images, Hyperlinks, Multimedia, Useful Tags, and the HTML DOM</p>
+    <nav id="top-nav">
+      <a href="#images">Images</a>
+      <a href="#hyperlinks">Hyperlinks</a>
+      <a href="#multimedia">Multimedia</a>
+      <a href="#useful-tags">Useful Tags</a>
+      <a href="#html-dom">HTML DOM</a>
+    </nav>
+  </header>
+
+  <section id="images">
+    <h2>Images</h2>
+
+    <p>
+      <img src="Screenshot (413).png" alt="Qingqiao - Master Cultivator" width="400"">
+    
+    </p>
+
+    <p>
+      <img src="Screenshot (365).png" alt="HSIN - Sentinel of Xuanfang" width="400">
+     
+    </p>
+
+   
+      <img src="Screenshot (923).png" alt="Chisa " width="400">
+      <figcaption>The Potential Girl (but got mutted during the final arc).</figcaption>
+    </figure>
+  </section>
+
+  <section id="hyperlinks">
+    <h2>Hyperlinks</h2>
+      <li><a href="Screenshot (365).png">About page</a></li>
+      <li><a href="https://wutheringwaves.kurogames.com/en/main/" target="_blank">Visit Wuthering Waves Website</a></li>
+      <li><a href="mailto:koskiekato@gmail.com">Send me an email</a></li>
+      <li><a href="#html-dom">Jump to the HTML DOM section</a></li>
+  </section>
+
+  <section id="multimedia">
+    <h2>Multimedia</h2>
+
+    <h3>Audio</h3>
+    <audio controls>
+      <source src="WuWa OST.mp3" type="audio/mpeg">
+    </audio>
+
+    <h3>Video</h3>
+    <video controls width="480">
+      <source src="ULT.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section id="useful-tags">
+    <h2>Useful Tags</h2>
+
+    <!--blockquote:show quotation from the normal text-->
+    <blockquote cite="https://www.w3.org/">
+      The power of the Web is in its universality.
+    </blockquote>
+
+    <p>I am learning HyperText Markup Language in this activity.</p>
+
+  <!--mark: highlight words in a sentenc -->
+    <p>Remember to <mark>write a descriptive alt text</mark>every image.</p>
+    <p>The <code>&lt;img&gt;</code> tag is used to display images.</p>
+    <pre>
+&lt;a href="https://www.example.com" target="_blank"&gt;
+  Visit site
+&lt;/a&gt;
+    </pre>
+  </section>
+
+  <section id="html-dom">
+    <h2>HTML DOM</h2>
+    <p>
+      The elements with an id in this page are <code>main-heading</code>,
+      <code>featured-figure</code>, <code>link-list</code>, <code>images</code>,
+      and <code>html-dom</code>. Below is a screenshot of my DevTools Elements panel.
+    </p>
+
+    <figure>
+      <img src="dom-tree.png" alt="Screenshot of the browser DevTools Elements panel showing the DOM tree of this page">
+      <figcaption>The DOM tree of this page in the browser DevTools.</figcaption>
+    </figure>
+  </section>
+
+
+
+</body>
+</html>
