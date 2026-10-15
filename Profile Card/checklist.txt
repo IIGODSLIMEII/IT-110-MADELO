@@ -1,0 +1,44 @@
+PROFILE CARD CHECKLIST 
+
+PART A - CSS FUNDAMENTALS
+
+[/] Link styles.css inside the <head> of index.html using <link rel="stylesheet" href="styles.css">.
+[/] Write at least 8 complete rules, each with a selector and a { property: value; } declaration block.
+[/] Add at least 3 CSS comments (/* ... */) that divide your file into sections (e.g., Reset, Layout, Components).
+[/] Use at least two different units, such as px, %, em, or rem (for example, rem for font sizes).
+[/] Show the cascade: write two rules that target the same element, and add a comment saying which one wins and why.
+
+PART B - SELECTORS, PROPERTIES AND VALUES
+
+[/] Universal selector (*): set margin: 0 and padding: 0 as a simple reset.
+[/] Type selector: style body and h1, h2 (use a grouping selector such as h1, h2 { ... } at least once).
+[/] Class selector: style .card and .intro.
+[/] ID selector: style #about so it stands out from the other cards (e.g., a different border color).
+[/] Combinator: use a descendant selector (e.g., .card p) and a child selector (e.g., .skills-list > li).
+[/] Pseudo-class: add a :hover effect to the nav links. Pseudo-element: use ::before on h2 or ::first-letter on .intro.
+[/] Use at least these properties: color, font-family, font-size, font-weight, text-align, background-color.
+[/] Define colors in three ways: a name, a hex code, and rgb()/rgba().
+
+PART C - BOX MODEL AND BASIC LAYOUT
+
+[/] Add * { box-sizing: border-box; } at the top of your stylesheet.
+[/] Give .card a fixed width (e.g., 500px), padding, a border (width, style, and color in one line), and border-radius.
+[/] Center every .card horizontally using margin: 0 auto, and use margin-bottom to space the cards apart.
+[/] Center the text in header and footer using text-align: center.
+[/] Use positioning: make #about position: relative, then add a small badge using #about::after with position: absolute placed in its top-right corner.
+[/] Add a comment that states the total rendered width of one .card and how you calculated it.
+
+PART D - DISPLAY AND VISIBILITY
+
+[/] Make the nav links display: inline-block, then give them padding and a background so you see how width/height spacing works.
+[/] Turn .skills-list into a flex container (display: flex) and use gap and justify-content to lay the items out in a row. Style each li like a small tag.
+[/] Hide .hide-none using display: none, and hide .hide-visibility using visibility: hidden.
+[/] Add a comment explaining the visible difference between those two hidden paragraphs on the page.
+[/] Give .scroll-box a fixed height (e.g., 120px) and set overflow: auto so that a scrollbar appears.
+
+REFLECTION QUESTIONS
+
+Answer in 2-3 sentences each. Write your answers in a comment at the very bottom of styles.css, or on a separate sheet.
+[/] 1. In your own words, why did one of your two conflicting rules win in Part A? (Think specificity and order.)
+[/] 2. What is the rendered width of one .card if box-sizing were content-box instead of border-box? Show your computation.
+[/] 3. When would you choose visibility: hidden instead of display: none?

@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+/*universal selector  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* type selector */
+body {
+  font-family: Arial, Helvetica, sans-serif;  
+  font-size: 1rem;                             
+  line-height: 1.5;
+  color: #333333;                             
+  background-color: #eef2f7;                 
+}
+
+h1, h2 {
+  font-weight: bold;                           
+  color: rgb(0, 0, 0);                                
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5em;                     
+}
+
+/*LAYOUT */
+
+header,
+footer {
+  text-align: center;
+  padding: 24px 0;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+main {
+  padding: 8px 0 24px;
+}
+
+/*
+   total rendered .card = 500px.
+   Because of box-sizing: border-box, the 500px width already includes
+   the padding and border:
+     content width = 500px - 24px + 24px padding - 2px + 2px border
+                   = 500px - 48px - 4px = 448px
+   So the card is 500px wide on screen, with 448px left.
+*/
+.card {
+  width: 500px;                              
+  max-width: 100%;                           
+  padding: 24px;
+  border: 2px solid #080a0d;                 
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.95); 
+  margin: 0 auto;                              
+  margin-bottom: 20px;                        
+}
+
+/* COMPONENTS  */
+
+
+#about {
+  border-color: rgb(200, 60, 60);             
+  position: relative;                          
+}
+
+#about::after {
+  content: "Hello!";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(27, 38, 103);
+  border-radius: 999px;
+}
+
+.card p {
+  color: #221a1a;
+  margin-bottom: 0.6em;
+}
+
+.intro {
+  color: #25204c;                             
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+
+.intro::first-letter {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #1d4e89;
+}
+
+
+/* NAVIGATION  */
+
+nav {
+  margin-top: 12px;
+}
+
+
+nav a {
+  display: inline-block;
+  padding: 8px 18px;                          
+  color: white;
+  background-color: #03070b;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+
+nav a:hover {
+  background-color: rgb(200, 60, 60);
+}
+
+/*  VISIBILITY  */
+
+.skills-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
+}
+
+.skills-list > li {
+  padding: 4px 14px;
+  font-size: 0.9rem;
+  color: #04070b;
+  background-color: #dbe7f5;
+  border: 1px solid #060d15;
+  border-radius: 999px;
+}
+
+/*
+   Part D: visible difference between the two hidden paragraphs.
+   - display: none removes the element from the layout completely.
+                        It takes up no space.
+
+   - visibility: hidden hides the element but still reserves its space.
+                        An empty gap stays on the page would be.
+*/
+
+.hide-none {
+  display: none;
+}
+
+.hide-visibility {
+  visibility: hidden;
+}
+
+/* scrollbar */
+.scroll-box {
+  height: 120px;
+  overflow: auto;
+  text-align: left;                           
+}
+
+/* 
+   REFLECTION 
+   
+   1. Why did one of the two conflicting rules win in Part A?
+   
+      The ".card p" rule won because it has higher specificity  than ".intro". The browser compares
+      specificity first, so the later position of ".intro" in the file did
+      not help it.
+
+   2. What is the rendered width of one .card if box-sizing were
+      content-box instead of border-box?
+
+      With content-box, the 500px width applies only to the content, so
+      padding and border are added on top: 500px + 24px + 24px padding
+      + 2px + 2px border = 552px. The card would be 52px wider.
+
+   3. When would you choose visibility: hidden instead of display: none?
+   
+      I would use visibility: hidden when the layout must not shift, display:
+      none is better when the element should not take up any space.
+   */
