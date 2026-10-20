@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusHub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home">Campus<span>Hub</span></a> 
+
+    <nav class="nav" aria-label="Main">
+      <a href="#home" class="nav-link active" data-target="home" aria-current="page">Home</a>
+      <a href="#courses" class="nav-link" data-target="courses">Courses</a>
+      <a href="#contact" class="nav-link" data-target="contact">Contact</a>
+    </nav>
+
+    <label class="theme-switch">
+      <span class="theme-label">Dark mode</span>
+      <input type="checkbox" id="darkToggle" role="switch" aria-label="Toggle dark mode">
+      <span class="track"><span class="thumb"></span></span>
+    </label>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <article class="card">
+        <div class="avatar" aria-hidden="true">AK</div>
+        <h1>Andre Koskie Madelo</h1>
+        <p class="subtitle">BS Information Technology, 2nd Year</p>
+
+        <ul class="tags">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+
+        <div class="actions">
+          <button type="button" id="likeBtn" class="btn btn-primary" aria-pressed="false">
+            <span class="heart" aria-hidden="true">&hearts;</span> Like
+            <span class="count" id="likeCount">24</span>
+          </button>
+          <button type="button" id="resetBtn" class="btn btn-outline">Reset</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="courses" class="page">
+      <article class="card">
+        <h1>Courses</h1>
+        <p class="subtitle">This semester</p>
+        <ul class="plain-list">
+          <li>Web Development 2</li>
+          <li>Database Systems</li>
+          <li>Networking Fundamentals</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="contact" class="page">
+      <article class="card">
+        <h1>Contact</h1>
+        <p class="subtitle">Get in touch</p>
+        <ul class="plain-list">
+          <li>koskiekato@campushub.edu</li>
+          <li>Room 204, IT Building</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 CampusHub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
